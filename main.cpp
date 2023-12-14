@@ -1,33 +1,5 @@
 #include <iostream>
 
-/*Задание 7. Меню ресторана
-Что нужно сделать
-        Напишите программу, которая выводит меню бизнес-ланча ресторана в зависимости от дня недели.
-        В меню есть общая часть, а есть уникальная, которая зависит от дня недели.
-        Пользователь должен ввести номер дня недели — от 1 (понедельник) до 7 (воскресенье), а программа должна вывести на экран день недели и меню этого дня.
-
-Пример 1
-
-Введите день недели (от 1 до 7): 4
-Меню сегодня (четверг):
-Гороховый суп
-Салат «Цезарь» с креветками
-Куриная ножка с пюре
-Морс
-
-        Пример 2
-
-Введите день недели (от 1 до 7): 2
-Меню сегодня (вторник):
-Харчо
-        Салат «Оливье»
-Баварские колбаски с капустой
-Морс
-
-        Что оценивается
-        Оптимальное использование условных операторов.
-Приветствуется обработка пользовательского ввода*/
-
 int main() {
     int dayWeek;
     std::cout << "Enter the day of the week (from 1 to 7): ";
@@ -52,5 +24,32 @@ int main() {
             day = "Wednesday";
             menuDay = "1.Rassolnik, 2.Stolichny salad.";
         }
+        if(dayWeek == 4)
+        {
+            day = "Thursday";
+            menuDay = "1. Homemade cutlets, 2. Coffee.";
+        }
+        if(dayWeek == 5)
+        {
+            day = "Friday";
+            menuDay = "1. Solyanka, 2. Fish salad.";
+        }
+        if(dayWeek == 6)
+        {
+            day = "Saturday";
+            menuDay = "1. Pilaf, 2. Tea.";
+        }
+        if(dayWeek == 7)
+        {
+            day = "Sunday";
+            menuDay = "1. Ukha, 2. Vinaigrette.";
+        }
+
+        std::cout << "Menu on " << day << std::endl;
+        std::cout << "General part: 1. Chicken broth, 2. Beef goulash, 3. Olivier salad, 4. Compote." << std::endl;
+        std::cout << "Dishes of the day: " << menuDay << std::endl;
+    } else {
+        std::cout << "You entered the wrong day number!" << std::endl;
+        std::cout << "Enter the number of the day of the week - from 1 (Monday) to 7 (Sunday)" << std::endl;
     }
 }
